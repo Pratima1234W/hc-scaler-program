@@ -1,0 +1,44 @@
+//DS - Array.
+//Time Complexity
+//Worst case:outer loop :O(n2)
+//Best case:O(n) 
+//Average case:O(n2)
+//space complexity:O(1)-since we use constant memory.
+//Sorting Algorithm:Bubble sort.
+
+public class Assessment 
+{
+	void bsort(int arr[])
+	{
+		int n=arr.length;
+		int temp;
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=0;j<n-1;j++)
+			{
+				if(arr[i]<arr[j])
+				{
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+	}
+	public static void main(String args[])
+	{	int n;
+		int arr[]= {10,70,2,80,9,67,15};
+		Assessment obj=new Assessment();
+		obj.bsort(arr);
+		System.out.println("Elements are in accending order:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]+"");
+		}
+		String str = "";
+		while(str.length() < n) { // will iterate N times
+		    System.out.println(str+""); // has to print N letters
+		   	System.out.println("Time complexity:");
+	}
+}
+}

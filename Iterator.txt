@@ -1,0 +1,3 @@
+Iteration:
+
+-	A itreator is object that can be used to loop through collection like Array list and Hashset.

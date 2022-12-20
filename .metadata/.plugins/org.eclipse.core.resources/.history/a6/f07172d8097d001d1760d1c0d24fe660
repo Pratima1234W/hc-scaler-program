@@ -1,0 +1,23 @@
+
+public class LinklistDemo <T>
+{
+	class Node{
+		T data;
+		Node next;
+		Node(T data){					//constructor
+			this.data=data;
+		}
+		void traverse(Node head) {
+			Node temp=head;
+			while(temp!=null) {
+				System.out.println(temp.data);
+				temp=temp.next;
+			}
+			System.out.println("traverse complete as condition is true:");
+		}
+
+	}
+	
+
+}
+//Note: if we get head pointer we can traverse whole linked list.

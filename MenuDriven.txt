@@ -1,0 +1,20 @@
+Menu Driven: 
+
+Menu driven displays list of options according to user inputs.
+
+Algorithm:
+
+Step1	:	Read the program.
+step2	:	select options
+step3	:	repeat till valid option
+		step3a	:	if choise 1
+					perform task.
+					break.
+		step3b	:	if choice 2
+					perform task.
+					break.
+		step3c	:	if choice 3
+					perform task.
+					break.
+		default	:	perform task.
+step4	:	Stop the program.

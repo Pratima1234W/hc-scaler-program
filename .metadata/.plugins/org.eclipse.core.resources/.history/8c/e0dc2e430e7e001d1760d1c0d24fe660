@@ -1,0 +1,28 @@
+package assignment;
+
+import java.util.Scanner;
+
+
+
+public class Application {
+
+	public class ApplicationRevised {
+
+		public static void main(String[] args) {
+
+			Menu mainMenu = new Menu("Data structures");
+			mainMenu.addMenuItem(new MenuItem(1, "Stack"));
+			mainMenu.addMenuItem(new MenuItem(2, "Queue"));
+			mainMenu.addMenuItem(new MenuItem(3, "Array"));
+			mainMenu.addMenuItem(new MenuItem(4, "LinkedList"));
+			mainMenu.display();
+
+			System.out.println("Enter your choice");
+			Scanner sc = new Scanner(System.in);
+			int choice = sc.nextInt();
+
+		}
+
+	}
+
+}

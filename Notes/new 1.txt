@@ -1,0 +1,9 @@
+Oueue data structure(FIFO):
+
+Front:start part of queue.
+Rear :End part of queue.
+
+OPRATIONS:
+*Enqueue	-	add
+*Dqueue		-	remove
+*Peek		-	front

@@ -1,0 +1,34 @@
+//Queue with Array
+public class QueueD 
+{
+	static class Queue
+	{
+		static int arr[];
+		static int size;
+		static int rear=-1;
+		
+		Queue (int n)	//constructor to know array size
+		{
+			arr=new int[n];
+			this.size=n;
+		}
+		
+		public static boolean isEmpty() //to check is queue empty or full.
+		{
+			return rear==-1;
+		}
+		
+		//enqueue
+		
+		public static void add(int data)
+		{
+			if(rear==size-1)
+			{
+				System.out.println("Queue is full:");
+				return;
+			}
+			rear++;
+			arr[rear]=data;
+		}
+	}
+}

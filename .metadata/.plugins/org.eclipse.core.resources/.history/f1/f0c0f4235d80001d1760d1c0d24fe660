@@ -1,0 +1,166 @@
+package assignment;
+
+import java.util.ArrayList;
+//import java.util.SLinkList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Menu extends MenuItem {
+
+	List<MenuItem> listOfMenu = new ArrayList<>();
+	private static boolean isLevelOne = true;
+
+	// TODO: create objects of Stack, Queue, Array
+
+	public Menu(int order, String name) {
+		super(order, name);
+		addMenuItem(new MenuItem(0, "Back"));
+	}
+
+	public Menu(String title) {
+		super(0, title);
+	}
+
+	public void addMenuItem(MenuItem mi) {
+		mi.setParent(this);
+		listOfMenu.add(mi);
+	}
+
+	public List<MenuItem> getMenuItems() {
+		return listOfMenu;
+	}
+
+	public void display() {
+		if (isLevelOne) {
+			isLevelOne = false;
+			listOfMenu.forEach(item -> item.display());
+			isLevelOne = true;
+			System.out.println("Enter your choice:");
+			int choice = new Scanner(System.in).nextInt();
+
+			if (choice == 0) {
+				back();
+			} else {
+				MenuItem mi = getMenuItems().stream().filter(menuItem -> menuItem.getOrder() == choice).findFirst()
+						.orElse(null);
+				if (mi == null) {
+					System.err.println("Invalid choice");
+					display();
+				} else if (mi instanceof Menu) {
+					mi.display();
+				} else {
+					String operationName = mi.getName();
+					String dataStructureName = mi.getParent().getName();
+
+					switch (dataStructureName) {
+					case "Stack":
+						callStackOperation(operationName);
+
+					case "Queue":
+						callQueueOperation(operationName);
+
+					case "Array":
+						callArrayOperation(operationName);
+
+					case "LinkList":
+						callLinkListOperation(operationName);
+
+					}
+				}
+
+			}
+		} else {
+			super.display();
+		}
+
+	}
+
+	private void callLinkListOperation(String operationName) {
+		// TODO Auto-generated method stub
+		switch (operationName) {
+		case "insertNode":
+			System.out.println("Enter element:");
+			int scanner4 = new Scanner(System.in).nextInt();
+			DsDemoApp.l1.insertNode(scanner4);
+			display();
+			break;
+
+		case "deleteNode":
+			System.out.println("Enter element to delete node:");
+			int scanner5 = new Scanner(System.in).nextInt();
+			DsDemoApp.l1.deleteNode(scanner5);
+			display();
+			break;
+		}
+	}
+
+	private void callArrayOperation(String operationName) {
+		// TODO Auto-generated method stub
+		switch (operationName) {
+		case "insertion":
+			System.out.println("Enter element:");
+			int scanner2 = new Scanner(System.in).nextInt();
+			DsDemoApp.a1.insertion(scanner2);
+			display();
+			break;
+
+			case "resize":
+			System.out.println("Enter element want to delete:");
+			int scanner3 = new Scanner(System.in).nextInt();
+			DsDemoApp.a1.resize(scanner3);
+			display();
+			break;
+
+		}
+	}
+
+	private void callStackOperation(String operationName) {
+		// TODO Auto-generated method stub
+		switch (operationName) {
+		case "PUSH":
+			System.out.println("Enter element:");
+			int scanner8 = new Scanner(System.in).nextInt();
+			DsDemoApp.stack.push(scanner8);
+			break;
+		case "POP":
+			System.out.println("Remove Element:" + DsDemoApp.stack.pop());
+			back();
+			break;
+		case "PEAK":
+			System.out.println("Peak Element:" + DsDemoApp.stack.peek());
+			back();
+			break;
+		}
+	}
+
+	private void callQueueOperation(String operationName) {
+		// TODO Auto-generated method stub
+		switch (operationName) {
+		case "Add":
+			System.out.println("Enter element:");
+			int scanner1 = new Scanner(System.in).nextInt();
+			QueueD.adding(scanner1);
+			display();
+			break;
+
+		case "Remove":
+			System.out.println("Enter element to remove:" + QueueD.remove());
+			back();
+			break;
+
+		case "Peak":
+			System.out.println("Peek Element:" + QueueD.peek());
+			back();
+			break;
+		}
+	}
+
+	public void back() {
+		if (getParent() != null) {
+			getParent().display();
+
+		} else {
+			System.exit(0);
+		}
+	}
+}

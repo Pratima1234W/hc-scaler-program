@@ -1,0 +1,47 @@
+
+public class Array {
+	public void traverse() {
+		
+	}
+	static int insertion(int arr[],int key,int capacity) {
+		int n=arr.length;
+		if(n >= capacity)
+        return n;
+		 
+    arr[n] = key;
+
+    return (n + 1);
+	}
+	public void deletion() {
+		
+	}
+	public void update() {
+		
+	}
+	public void search() {
+		
+	}
+	public static void main(String args[]) {
+		 int[] arr = new int[30];
+	        arr[0] = 12;
+	        arr[1] = 16;
+	        arr[2] = 20;
+	        arr[3] = 40;
+	        arr[4] = 50;
+	        arr[5] = 70;
+	        int capacity = 20;
+	        int n = 6;
+	        int i, key = 26;
+	 
+	        System.out.print("Before Insertion: ");
+	        for (i = 0; i < n; i++)
+	            System.out.print(arr[i] + " ");
+	 
+	        // Inserting key
+	        n = insertion(arr, key, capacity);
+	 
+	        System.out.print("\n After Insertion: ");
+	        for (i = 0; i < n; i++)
+	            System.out.print(arr[i] + " ");
+}
+}

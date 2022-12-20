@@ -1,0 +1,45 @@
+
+public class MenuDriven {
+	public static void main(String args[]) {
+		int ch;
+		//Displaying Menu.
+		System.out.println("1.Array:");
+		System.out.println("2.Stack:");
+		System.out.println("3.Queue:");
+		System.out.println("4.Linked List:");
+		
+		System.out.println("Make your choice:");
+		switch (ch) {
+		case 1:
+			//Displaying sub menu of Array.
+			System .out.println("Select Opration want to perform:");
+			System.out.println("Insertion.");
+			System.out.println("Deletion.");
+			break;
+			
+			case 2:
+				//Displaying sub menu of Stack.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("Push.");
+				System.out.println("POP");
+				System.out.println("Peek");
+				break;
+				
+			case 3:
+				//Displaying sub menu of Queue.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("Push.");
+				System.out.println("POP.");
+				System.out.println("Peek");
+				break;
+				
+			case 4:
+				//Displaying sub menu of Linked List.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("Insertion.");
+				System.out.println("Deletion.");
+				System.out.println("Traverse");
+				break;
+		}
+	}
+}

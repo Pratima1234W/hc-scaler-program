@@ -1,0 +1,29 @@
+package Assignment;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Menu extends MenuItem {
+		private List<MenuItem> items = new ArrayList<>();
+
+		public Menu(String title) {
+			super(0, title);
+		}
+
+		public void addMenuItem(MenuItem mi) {
+			items.add(mi);
+		}
+
+		public List<MenuItem> getMenuItems() {
+			return items;
+		}
+
+		public void display() {
+			System.out.println(getName());
+			for (MenuItem mi : getMenuItems()) {
+				System.out.println(mi.getOrder() + "." + mi.getName());
+			}
+		}
+
+	}
+

@@ -1,0 +1,27 @@
+Oueue data structure(FIFO):
+
+Front:start part of queue.
+Rear :End part of queue.
+
+OPRATIONS:
+*Enqueue	-	add
+*Dequeue	-	remove		Deque:both ended queue.
+*Peek		-	front	just to see which element is present on front.
+
+Implimentation
+
+1.	Queue using Array(add-O(1, remove-O(n), peek-O(n)
+	- In this method front postion is constant and rear position change.
+	- Elements adding in queue through queue end and removing elements in queue through queue front.
+2.	Circular queue using Array,(add- O(1), remove- O(1), peek- O(1), so always preffer this implimentation method.
+	-	In this menthod rear and front position change.
+	-	Elements adding in queue
+	-	rear=(rear+1)%size
+3.	Queue using linked list
+
+
+
+
+Note:
+Front and rear both valu -1 which indicates queue is empty.
+isEmpty(): just to know queue is empty or full.

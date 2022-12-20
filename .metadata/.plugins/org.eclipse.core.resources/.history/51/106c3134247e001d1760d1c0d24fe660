@@ -1,0 +1,114 @@
+import java.util.Scanner;
+
+public class MenuDriven {
+
+	public static void main(String args[]) {
+		int ch, ch1, ch2, ch3;
+		ArrayClass arrayClass = new ArrayClass();
+		StackD ob = new StackD();
+		QueueD ob1 = new QueueD();
+		SLinkList ob2 = new SLinkList();
+		boolean mainMenu = true;
+
+		while (mainMenu) {
+
+			Scanner scanner = new Scanner(System.in);
+
+			// Displaying Menu.
+			System.out.println("DataStructure:");
+			System.out.println("1.Array:");
+			System.out.println("2.Stack:");
+			System.out.println("3.Queue:");
+			System.out.println("4.Linked List:");
+			// System.out.println("5.Exit:");
+
+			System.out.println("Make your choice:");
+			ch = scanner.nextInt();
+
+			switch (ch) {
+			case 1:
+				boolean subMenu = true;
+				while (subMenu) {
+					// Displaying sub menu of Array.
+					System.out.println("You are in Array DS:");
+					System.out.println("1.Insertion.");
+					System.out.println("2.Deletion.");
+					System.out.println("3.Exit.");
+				}
+				ch1 = scanner.nextInt();
+				switch (ch1) {
+				case 3:
+
+					// System.out.println("c.Exit.");
+					break;
+				case 1:
+					// arrayClass.insertion(null, ch1, ch2, ch3);
+					System.out.println("You are performing insertion operation:");
+					break;
+
+				case 2:
+					System.out.println("You are performing insertion operation:");
+					subMenu = false;
+					break;
+				}
+
+				break;
+
+			case 2:
+
+				// Displaying sub menu of Stack.
+				System.out.println("You are in Array Stack:");
+				System.out.println("1.Push.");
+				System.out.println("2.POP");
+				System.out.println("3.Peek");
+				System.out.println("4.Exit.");
+				ch2 = scanner.nextInt();
+				switch (ch2) {
+				case 3:
+					// System.out.println("c.Exit.");
+
+					break;
+				}
+
+				break;
+
+			case 3:
+
+				// Displaying sub menu of Queue.
+				System.out.println("You are in Queue1 DS:");
+				System.out.println("1.Push.");
+				System.out.println("2.POP.");
+				System.out.println("3.Peek");
+				System.out.println("4.Exit.");
+				break;
+
+			case 4:
+
+				// Displaying sub menu of Linked List.
+				System.out.println("Select Opration want to perform:");
+				System.out.println("1.Insertion.");
+				System.out.println("2.Deletion.");
+				System.out.println("3.Traverse");
+				System.out.println("4.Exit.");
+				ch3 = scanner.nextInt();
+				switch (ch3) {
+				case 4:
+					// System.out.println("c.Exit.");
+
+					break;
+				}
+				break;
+
+			case 5:
+				System.exit(0);
+				break;
+
+			default:
+				// Default case.
+				System.out.println("Invalid choice, Please make valid choice.");
+				break;
+			}
+		}
+
+	}
+}

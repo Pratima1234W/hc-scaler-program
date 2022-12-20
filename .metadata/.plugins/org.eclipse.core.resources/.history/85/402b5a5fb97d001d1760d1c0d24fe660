@@ -1,0 +1,44 @@
+
+public class Array {
+	public void traverse() {
+		
+	}
+	static void insertion(int[] arr, int n, int x, int pos) {
+		for (int i = n - 1; i >= pos; i--)
+            arr[i + 1] = arr[i];
+        arr[pos] = x;
+	}
+	
+	public void deletion() {
+		
+	}
+	public void update() {
+		
+	}
+	public void search() {
+		
+	}
+	public static void main(String args[]) {
+		 int[] arr = new int[30];
+	        arr[0] = 12;
+	        arr[1] = 16;
+	        arr[2] = 20;
+	        arr[3] = 40;
+	        arr[4] = 50;
+	        arr[5] = 70;
+	        int x = 10;
+	        int n = 3;
+	        int pos= 20;
+	 
+	        System.out.print("Before Insertion: ");
+	        for (int i = 0; i < n; i++)
+	            System.out.print(arr[i] + " ");
+	 
+	        // Inserting key
+	        n = insertion(arr, key);
+	 
+	        System.out.print("\n After Insertion: ");
+	        for (i = 0; i < n; i++)
+	            System.out.print(arr[i] + " ");
+}
+}

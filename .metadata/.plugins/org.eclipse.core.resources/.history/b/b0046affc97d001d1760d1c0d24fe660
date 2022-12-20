@@ -1,0 +1,14 @@
+
+public class MenuDriven {
+	static void display() {
+		//Displaying Menu.
+		System.out.println("1.Array:");
+		System.out.println("2.Stack:");
+		System.out.println("3.Queue:");
+		System.out.println("4.Linked List:");
+	}
+
+	public static void main(String args[]) {
+		
+	}
+}

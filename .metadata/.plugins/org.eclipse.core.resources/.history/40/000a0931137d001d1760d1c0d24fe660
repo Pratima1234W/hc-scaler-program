@@ -1,0 +1,61 @@
+
+public class LinklistDemo
+{
+	class Node{
+		int data;
+		Node next;
+		Node(int data){					//constructor
+			this.data=data;
+		}
+	}
+		void traverse(Node head) {
+			Node temp=head;
+			while(temp!=null) {
+				System.out.println(temp.data);
+				temp=temp.next;
+			}
+			System.out.println("traverse complete as condition is true:");
+		}
+		
+		void insertion(int data, Node head, int pos)
+		{
+			Node toAdd = new Node(data);
+			if(pos==0)
+			{
+				toAdd.next=head;
+				head=toAdd;
+				return;
+			}
+			Node prev=head;
+			for(int i=0;i<pos-1;i++) {
+				prev=prev.next;
+			}
+			toAdd.next=prev.next;
+			prev.next=toAdd;
+		}
+		
+		void delete(Node head,int pos )
+		{
+			if(pos==0)
+			{
+				head=head.next;
+				return;
+			}
+			Node prev=head;
+			for(int i=0;i<pos-1;i++)
+			{
+				prev=prev.next;
+			}
+			prev.next=prev.next.next;
+		}
+	
+	public static void main(String args[]) {
+		LinklistDemo obj=new LinklistDemo();
+		obj.traverse(null);
+		obj.insertion(10, null, 2);
+		obj.insertion(20, null, 0);
+	}
+	
+
+}
+//Note: if we get head pointer we can traverse whole linked list.

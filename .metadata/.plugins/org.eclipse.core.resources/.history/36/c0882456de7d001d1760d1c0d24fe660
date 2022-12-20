@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class MenuDriven {
+	public static void main(String args[]) {
+		int ch, ch1;
+        Scanner scanner = new Scanner(System.in);
+
+		
+		//Displaying Menu.
+        System.out.println("DataStructure:");
+		System.out.println("1.Array:");
+		System.out.println("2.Stack:");
+		System.out.println("3.Queue:");
+		System.out.println("4.Linked List:");
+		
+		System.out.println("Make your choice:");
+		ch=scanner.nextInt();
+		
+		switch (ch) {
+		case 1:
+			//Displaying sub menu of Array.
+			//System .out.println("Select Opration want to perform:");
+			System.out.println("a.Insertion.");
+			System.out.println("b.Deletion.");
+			System.out.println("c.Exit.");
+			ch1 = scanner.nextInt();
+			switch(ch1) {
+			case 6:
+				System.out.println("c.Exit.");
+				System.exit(0);
+			}
+			break;
+			
+			
+			case 2:
+				//Displaying sub menu of Stack.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("a.Push.");
+				System.out.println("b.POP");
+				System.out.println("c.Peek");
+				System.out.println("Exit.");
+				
+				break;
+				
+			case 3:
+				//Displaying sub menu of Queue.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("a.Push.");
+				System.out.println("b.POP.");
+				System.out.println("c.Peek");
+				System.out.println("Exit.");
+				break;
+				
+			case 4:
+				//Displaying sub menu of Linked List.
+				System .out.println("Select Opration want to perform:");
+				System.out.println("a.Insertion.");
+				System.out.println("b.Deletion.");
+				System.out.println("c.Traverse");
+				System.out.println("Exit.");
+				break;
+				
+			case 5:
+				//Default case.
+				System .out.println("Invalid choice, Please make valid choice.");
+				break;
+		}
+				
+	}
+}

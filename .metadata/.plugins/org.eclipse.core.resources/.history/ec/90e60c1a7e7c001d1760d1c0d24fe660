@@ -1,0 +1,29 @@
+
+public class SLinkList {
+	public static class Node
+	{
+		int data;
+		Node next;
+
+	}
+	public static void main (String args[])
+	{
+		Node obj1 = new Node();
+		Node obj2 = new Node();
+		Node obj3 = new Node();
+		obj1.data = 1;
+		obj2.data = 5;
+		obj3.data = 10;
+		
+		obj1.next=obj2;
+		obj2.next=obj3;
+		obj3.next=null;
+		
+		for(int i=0;i<3;i++)
+		{
+		System.out.println(obj1.data+"");
+		obj1=obj1.next;
+		
+	}
+
+}

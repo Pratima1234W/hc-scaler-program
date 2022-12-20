@@ -1,0 +1,35 @@
+
+public class Array {
+	public void traverse() {
+		
+	}
+	public void insertion() {
+		
+	}
+	public void deletion() {
+		
+	}
+	public void update() {
+		
+	}
+	public void search(int a[]) {
+		int i;
+		int n=a.length;
+	      for (i= 0; i <n; i++)
+	      {
+	         if (a[i] ==n ) 
+	         {
+	           System.out.println(n+" is present at location "+(i+1));
+	           break;
+	         }
+	      }
+	      if (i == a.length)
+	        System.out.println(n + " doesn't exist in array.");		
+	}
+	public static void main(String args[]) {
+		Array a1=new Array();
+		int a[]={1,4,7,9,10};
+		a1.search(9);
+	}
+
+}

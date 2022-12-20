@@ -1,0 +1,19 @@
+Stack Data structure(LIFO
+
+Stack memory inside recurtion which is called as implicit stack(inbuilt) explicit(developed by developer).
+
+
+OPERATIONS:
+
+1.	push	-	Adding data in stack.
+2.	pop()	- 	Removing data in stck.
+3.	peek()	-	see data on top.
+
+IMPLIMENTATION
+
+1.	Stack with Array
+2.	Stack with ArrayList
+3.	Stack with Linkedlist
+
+
+
